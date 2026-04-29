@@ -1,15 +1,27 @@
 {
-  "name": "new-connectideia",
+  "name": "lp-connectideia-en",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "description": "ConnectIdeia English landing page — high-conversion lead capture with AI-powered diagnosis (Gemini via Supabase Edge Function, deployed on Vercel).",
+  "homepage": "https://www.connectideia.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeonardoMeloLima/connectideia-en.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonardoMeloLima/connectideia-en/issues"
+  },
+  "author": "Leonardo Melo Lima",
+  "license": "UNLICENSED",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod"
+  },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.101.1",
