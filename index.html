@@ -2937,9 +2937,13 @@
                 }, 50);
             }
 
-            fetch('/api/analyze?t=' + Date.now(), {
+            fetch('https://kfgkozztzxrpppwzhidk.supabase.co/functions/v1/analyze?t=' + Date.now(), {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'apikey': 'sb_publishable_A8Acv3HqTCy-FubIG5VBNQ_xoKfH1Qx',
+                    'Authorization': 'Bearer sb_publishable_A8Acv3HqTCy-FubIG5VBNQ_xoKfH1Qx'
+                },
                 body: JSON.stringify({ url: url, phase: leadData.phase, bottleneck: leadData.bottleneck })
             })
             .then(function(r) { return r.json(); })

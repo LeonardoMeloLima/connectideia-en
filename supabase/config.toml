@@ -1,0 +1,7 @@
+
+[functions.analyze]
+enabled = true
+# Public endpoint called from the LP — origin allowlist + in-function rate limit handle access control.
+verify_jwt = false
+import_map = "./functions/analyze/deno.json"
+entrypoint = "./functions/analyze/index.ts"

@@ -1,1 +1,29 @@
+# Vercel
 .vercel
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Supabase CLI scratch
+supabase/.temp/
+supabase/.branches/
+
+# Build artefacts
+dist/
+build/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*.local
+*.log
+
+# Sensitive temp scratch
+*.key.env
+gemini.env
