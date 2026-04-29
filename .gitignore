@@ -27,3 +27,6 @@ Thumbs.db
 # Sensitive temp scratch
 *.key.env
 gemini.env
+
+# Image compression backup (local only)
+.image-backups/
