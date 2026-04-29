@@ -1,0 +1,3217 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com -->
+<!-- Last Published: Wed Mar 25 2026 04:47:56 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="visia-template.webflow.io" data-wf-page="69365cd9c75712dd12c616fe" data-wf-site="69365cd8c75712dd12c61654" data-wf-status="1" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous" />
+    <title>
+      ConnectIdeia | Elite Digital Ecosystems
+    </title>
+    <meta content="We turn your vision into a digital reality. Specialists in high-converting Landing Pages, custom-built Apps and AI Automations. ConnectIdeia — Connecting ideas to the future." name="description" />
+    <meta content="ConnectIdeia | Elite Digital Ecosystems" property="og:title" />
+    <meta content="We turn your vision into a digital reality. Specialists in high-converting Landing Pages, custom-built Apps and AI Automations. ConnectIdeia — Connecting ideas to the future." property="og:description" />
+    <meta content="./favicon.svg" property="og:image" />
+    <meta content="ConnectIdeia | Elite Digital Ecosystems" property="twitter:title" />
+    <meta content="We turn your vision into a digital reality. Specialists in high-converting Landing Pages, custom-built Apps and AI Automations. ConnectIdeia — Connecting ideas to the future." property="twitter:description" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/css/visia-template.webflow.shared.32f96ed3f.min.css" rel="stylesheet" type="text/css" integrity="sha384-Mvlu0/rZbDgaYD4B4La1clTTs3qNI1ZwaKK0KC0JpvYCiIcRivZu85oKAoIogawb" crossorigin="anonymous" />
+    <style>
+      /* Typography Refinement */
+      .hero-heading { 
+          font-size: clamp(1.8rem, 4vw, 3.5rem) !important; 
+          text-indent: 0 !important;
+          margin-left: 0 !important;
+          padding-left: 0 !important;
+      }
+      .section-heading {
+          max-width: 950px !important;
+          width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+      }
+      
+      .nav-link {
+        white-space: nowrap !important;
+      }
+
+      #processo, #para-quem-e, #solucoes, #contato {
+        scroll-margin-top: 100px !important;
+      }
+
+      .footer-body, .footer-body-highlight {
+        text-indent: 0 !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        display: block !important;
+        text-align: left !important;
+      }
+
+      .author-photo {
+        filter: grayscale(100%) brightness(1.1) contrast(1.1);
+      }
+
+      /* Project Drawer - Estética Option A */
+      .project-drawer {
+          position: fixed;
+          top: 0; right: 0; bottom: 0;
+          width: 100%; max-width: 480px;
+          background: rgba(4, 4, 4, 0.85);
+          backdrop-filter: blur(40px);
+          -webkit-backdrop-filter: blur(40px);
+          z-index: 999999;
+          transform: translateX(100%);
+          transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+          border-left: 1px solid rgba(255, 255, 255, 0.05);
+          padding: 60px 40px;
+          display: flex;
+          flex-direction: column;
+          color: white;
+      }
+      .project-drawer.open { transform: translateX(0); }
+      .drawer-close {
+          position: absolute; top: 30px; right: 30px;
+          cursor: pointer; opacity: 0.5; transition: 0.3s;
+      }
+      .drawer-close:hover { opacity: 1; }
+      
+      .drawer-title { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 40px; }
+      .drawer-step { margin-bottom: 30px; }
+      .drawer-step-num { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 8px; }
+      .drawer-step-title { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 4px; }
+      .drawer-step-desc { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.5); }
+      
+      .drawer-visit-btn {
+          margin-top: auto;
+          align-self: flex-start; /* Não ocupa a largura toda */
+          display: inline-flex; align-items: center; justify-content: center;
+          padding: 12px 30px; background: white; color: black;
+          border-radius: 100px; text-decoration: none;
+          font-size: 0.85rem;
+          font-weight: 700; transition: 0.3s;
+      }
+      .drawer-visit-btn:hover { transform: translateY(-2px); background: #eee; }
+
+      /* Ticker Card & Badges */
+      .hero-ticker-card {
+          position: relative;
+          display: inline-block;
+          margin-right: 1.5rem; /* Ajustativo para o layout flex */
+          cursor: pointer;
+      }
+      .hero-ticker-badge {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(4, 4, 4, 0.65);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          color: white;
+          padding: 8px 18px;
+          border-radius: 100px;
+          font-size: 0.6rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          opacity: 1; /* Sempre visível */
+          pointer-events: none;
+          white-space: nowrap;
+          transition: all 0.4s ease;
+      }
+      .hero-ticker-card:hover .hero-ticker-badge {
+          background: rgba(4, 4, 4, 0.85);
+          border-color: rgba(255, 255, 255, 0.3);
+          transform: translateX(-50%) scale(1.05);
+      }
+      .hero-ticker-card:hover .hero-ticker-image {
+          filter: grayscale(0%) brightness(1.1) contrast(1);
+          transform: scale(1.02);
+      }
+
+      @media (max-width: 768px) {
+          .project-drawer {
+              padding: 60px 24px;
+              max-width: 100%;
+          }
+          .drawer-title {
+              font-size: 1.8rem;
+              margin-bottom: 30px;
+          }
+          .drawer-close {
+              top: 20px; right: 20px;
+              padding: 10px; /* Melhora área de toque */
+          }
+      }
+      .w-webflow-badge { display: none !important; }
+      .faq { background-color: #1C1C1C !important; }
+      .faq-section-heading, .faq-section-intro, .faq-eyebrow, .faq-email-link { color: #f2efeb !important; }
+      .faq-email-link { opacity: 1 !important; }
+      
+      /* Ajuste fino do Footer */
+      .socials { 
+        display: flex !important; 
+        align-items: center !important; 
+        gap: 16px !important; 
+        margin-top: 16px !important;
+        justify-content: flex-start !important;
+        padding-left: 0 !important;
+      }
+      .social-link { 
+        border: none !important;
+        border-bottom: none !important; 
+        text-decoration: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: opacity 0.2s ease;
+      }
+      .social-link:hover { opacity: 0.7; }
+      
+      /* Faixa de separação premium */
+      .separator-strip {
+        width: 100%;
+        height: 3px;
+        background-color: #f2efeb;
+      }
+      
+      /* Custom Cursor Showcase */
+      .project-cursor {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background-color: #f2efeb;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
+        opacity: 0;
+        mix-blend-mode: normal;
+      }
+      .project-cursor svg {
+        width: 14px;
+        height: 14px;
+        color: #000;
+        stroke: currentColor;
+        stroke-width: 3;
+      }
+      .hero-ticker-image {
+        cursor: none !important;
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.3s ease !important;
+      }
+      .hero-ticker-image:hover {
+        transform: scale(1.05) !important;
+        filter: brightness(1.1);
+      }
+      .project-cursor.active {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    </style>
+    <style>
+      html.w-mod-js:not(.w-mod-ix3) :is([animate], .hero-heading, .hero-body, .hero .button, .hero .image-overlay, .hero-ticker-wrapper, .hero-ticker-container, [header-variant=&#34;light&#34;], [header-variant=&#34;dark&#34;], .velocity-heading, .logos-ticker-container, .faq-answer-wrapper) {visibility: hidden !important;}
+    </style>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      WebFont.load({  google: {    families: [&#34;Inter:300,400,500,600,700&#34;,&#34;Sora:300,400,500,600,700&#34;]  }});
+    </script>
+    <script type="text/javascript">
+      !function(o,c){var n=c.documentElement,t=&#34; w-mod-&#34;;n.className+=t+&#34;js&#34;,(&#34;ontouchstart&#34;in o||o.DocumentTouch&amp;&amp;c instanceof DocumentTouch)&amp;&amp;(n.className+=t+&#34;touch&#34;)}(window,document);
+    </script>
+    <link href="./favicon.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="./favicon.svg" rel="apple-touch-icon" />
+    <link href="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b42648987030910f81f5e7_Webclip.png" rel="apple-touch-icon" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ConnectIdeia",
+        "description": "Elite Digital Ecosystems. Specialists in high-converting Landing Pages, custom-built Apps and AI Automations.",
+        "url": "./",
+        "logo": "./favicon.svg",
+        "sameAs": [
+          "https://instagram.com/connectideia",
+          "https://x.com/connectideia",
+          "https://linkedin.com/company/connectideia"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- =============================================
+         NAVBAR MOBILE FIXO — só aparece em ≤768px
+         ============================================= -->
+    <style>
+        .ci-nav-mobile {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 9999;
+            height: 58px;
+            padding: 0 1.25rem;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            transition: background 0.35s ease, backdrop-filter 0.35s ease;
+        }
+        .ci-nav-mobile.scrolled {
+            background: rgba(4,4,4,0.68);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .ci-nav-mobile__logo {
+            display: flex;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: white;
+            text-decoration: none;
+        }
+        .ci-nav-mobile__hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 34px;
+            height: 34px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .ci-nav-mobile__hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .ci-nav-mobile__hamburger.open span:nth-child(1) {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+        .ci-nav-mobile__hamburger.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .ci-nav-mobile__hamburger.open span:nth-child(3) {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+        .ci-menu-drawer {
+            display: none;
+            position: fixed;
+            top: 58px; left: 0; right: 0;
+            z-index: 9997;
+            background: linear-gradient(180deg, #1a1615 0%, #0d0b0b 60%, #000 100%);
+            flex-direction: column;
+            padding: 1.5rem 2rem 1.75rem;
+            opacity: 0;
+            transform: translateY(-8px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .ci-menu-drawer.open {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .ci-menu-drawer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .ci-menu-drawer__link {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            padding: 0.65rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: color 0.2s ease;
+        }
+        .ci-menu-drawer__link:first-child {
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .ci-menu-drawer__link:active { color: #ffffff; }
+        @media (max-width: 768px) {
+            .ci-nav-mobile { display: flex !important; }
+        }
+    </style>
+
+    <nav class="ci-nav-mobile" id="ci-nav-mobile">
+        <a href="#" class="ci-nav-mobile__logo">
+            ConnectIde<svg style="width:0.72em;height:0.72em;margin-left:2px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 10 35 L 10 85 L 50 15 L 90 85 L 50 60 L 30 72.5" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="15" r="6.5" fill="currentColor"/></svg>
+        </a>
+        <button class="ci-nav-mobile__hamburger" id="ci-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="ci-menu-drawer" id="ci-menu-drawer">
+        <div class="ci-menu-drawer__links">
+            <a href="#processo" class="ci-menu-drawer__link ci-drawer-close">Process</a>
+            <a href="#para-quem-e" class="ci-menu-drawer__link ci-drawer-close">Who it's for</a>
+            <a href="#solucoes" class="ci-menu-drawer__link ci-drawer-close">Solutions</a>
+            <a href="#contato" class="ci-menu-drawer__link ci-drawer-close">Contact Us</a>
+            <a href="mailto:contato@connectideia.com" class="ci-menu-drawer__link ci-drawer-close" style="font-size:0.8rem;margin-top:1rem;opacity:0.7;">contato@connectideia.com</a>
+        </div>
+    </div>
+
+
+    <script>
+        (function () {
+            var nav       = document.getElementById('ci-nav-mobile');
+            var hamburger = document.getElementById('ci-hamburger');
+            var drawer    = document.getElementById('ci-menu-drawer');
+            if (!nav || !hamburger || !drawer) return;
+
+            function onScroll() {
+                nav.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            function openDrawer() {
+                drawer.classList.add('open');
+                hamburger.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeDrawer() {
+                drawer.classList.remove('open');
+                hamburger.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+            hamburger.addEventListener('click', function () {
+                drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+            });
+
+            drawer.querySelectorAll('.ci-drawer-close').forEach(function (el) {
+                el.addEventListener('click', closeDrawer);
+            });
+
+            var popUpEl = document.querySelector('[pop-up="cta"]');
+            if (popUpEl) {
+                var obs = new MutationObserver(function () {
+                    var s = window.getComputedStyle(popUpEl);
+                    var isOpen = s.display !== 'none' && s.visibility !== 'hidden' && s.opacity !== '0';
+                    document.body.classList.toggle('ci-modal-open', isOpen);
+                    document.documentElement.classList.toggle('ci-modal-open', isOpen);
+                });
+                obs.observe(popUpEl, { attributes: true, attributeFilter: ['style', 'class'] });
+            }
+        })();
+    </script>
+    <!-- ============================================= -->
+
+    <header header-variant="" data-wf--header--variant="transparent" class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ada-974a1ad7" class="header-top">
+            <a href="/" aria-current="page" class="logo-link w-inline-block w--current" style="text-decoration:none;">            <span style="display:flex;align-items:center;font-size:22px;letter-spacing:-0.02em;font-weight:500;color:white;">ConnectIde<svg style="width:0.72em;height:0.72em;margin-left:2px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 10 35 L 10 85 L 50 15 L 90 85 L 50 60 L 30 72.5" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="15" r="6.5" fill="currentColor"/></svg></span>
+</a>
+            <div class="burger-icon">
+              <div class="burger-top">
+              </div>
+              <div class="burger-bottom">
+              </div>
+            </div>
+          </div>
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ae0-974a1ad7" class="navigation">
+            <nav data-wf--nav-menu--variant="static" class="nav-menu">
+              <a href="#processo" class="nav-link">              Process
+</a>
+              <a href="#para-quem-e" class="nav-link">              Who it's for
+</a>
+              <a href="#solucoes" class="nav-link">              Solutions
+</a>
+              <a href="#contato" class="nav-link">              Contact Us
+</a>
+            </nav>
+            <a data-wf--header-button--variant="dark" href="#" pop-up-open="cta" class="button small header-button w-inline-block">            <div>
+              Analyze my business
+            </div>
+</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header header-variant="light" data-wf--header--variant="light" class="header w-variant-d94ec6f1-f8cf-5bfb-1b6e-8ed64642ed64">
+      <div class="container">
+        <div class="header-wrapper w-variant-d94ec6f1-f8cf-5bfb-1b6e-8ed64642ed64">
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ada-974a1ad7" class="header-top">
+            <a href="/" aria-current="page" class="logo-link w-inline-block w--current" style="text-decoration:none;">            <span style="display:flex;align-items:center;font-size:22px;letter-spacing:-0.02em;font-weight:500;color:currentColor;">ConnectIde<svg style="width:0.72em;height:0.72em;margin-left:2px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 10 35 L 10 85 L 50 15 L 90 85 L 50 60 L 30 72.5" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="15" r="6.5" fill="currentColor"/></svg></span>
+</a>
+            <div class="burger-icon">
+              <div class="burger-top">
+              </div>
+              <div class="burger-bottom">
+              </div>
+            </div>
+          </div>
+          <nav data-wf--nav-menu--variant="fixed-light" class="nav-menu w-variant-34aac5d2-fa89-25c3-d9fb-a16d62ebd329">
+            <a href="#processo" class="nav-link w-variant-34aac5d2-fa89-25c3-d9fb-a16d62ebd329">            Process
+</a>
+            <a href="#para-quem-e" class="nav-link w-variant-34aac5d2-fa89-25c3-d9fb-a16d62ebd329">            Who it's for
+</a>
+            <a href="#solucoes" class="nav-link w-variant-34aac5d2-fa89-25c3-d9fb-a16d62ebd329">            Solutions
+</a>
+            <a href="#contato" class="nav-link w-variant-34aac5d2-fa89-25c3-d9fb-a16d62ebd329">            Contact Us
+</a>
+          </nav>
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ae0-974a1ad7" class="navigation w-variant-d94ec6f1-f8cf-5bfb-1b6e-8ed64642ed64 w-variant-d94ec6f1-f8cf-5bfb-1b6e-8ed64642ed64">
+            <a data-wf--header-button--variant="light" href="/#access" class="button small header-button w-variant-0c5a6ebc-6d4c-0a4b-8a77-e1f10b0206b1 w-inline-block">            <div>
+              Analyze my business
+            </div>
+</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header header-variant="dark" data-wf--header--variant="dark" class="header w-variant-204807c0-8c24-0388-2284-989fdb5090c0">
+      <div class="container">
+        <div class="header-wrapper w-variant-204807c0-8c24-0388-2284-989fdb5090c0">
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ada-974a1ad7" class="header-top">
+            <a href="/" aria-current="page" class="logo-link w-inline-block w--current" style="text-decoration:none;">            <span style="display:flex;align-items:center;font-size:22px;letter-spacing:-0.02em;font-weight:500;color:white;">ConnectIde<svg style="width:0.72em;height:0.72em;margin-left:2px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 10 35 L 10 85 L 50 15 L 90 85 L 50 60 L 30 72.5" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="15" r="6.5" fill="currentColor"/></svg></span>
+</a>
+            <div class="burger-icon">
+              <div class="burger-top">
+              </div>
+              <div class="burger-bottom">
+              </div>
+            </div>
+          </div>
+          <nav data-wf--nav-menu--variant="fixed-dark" class="nav-menu w-variant-fdad9022-f38a-e2e2-8bdc-64ff74f7bf7b">
+            <a href="#processo" class="nav-link w-variant-fdad9022-f38a-e2e2-8bdc-64ff74f7bf7b">            Process
+</a>
+            <a href="#para-quem-e" class="nav-link w-variant-fdad9022-f38a-e2e2-8bdc-64ff74f7bf7b">            Who it's for
+</a>
+            <a href="#solucoes" class="nav-link w-variant-fdad9022-f38a-e2e2-8bdc-64ff74f7bf7b">            Solutions
+</a>
+            <a href="#contato" class="nav-link w-variant-fdad9022-f38a-e2e2-8bdc-64ff74f7bf7b">            Contact Us
+</a>
+          </nav>
+          <div id="w-node-_9ebb8e1a-7d61-e37f-1e72-f6c4974a1ae0-974a1ad7" class="navigation w-variant-204807c0-8c24-0388-2284-989fdb5090c0">
+            <a data-wf--header-button--variant="dark" href="#" pop-up-open="cta" class="button small header-button w-inline-block">            <div>
+              Analyze my business
+            </div>
+</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-wrapper">
+      <div class="noise">
+      </div>
+      <section header-theme="hidden" class="hero">
+        <div class="container no-padding">
+          <div class="hero-wrapper">
+            <div class="revealing-image hero-image-column">
+              <img src="hero-9-16.png" loading="lazy" sizes="(max-width: 1128px) 100vw, 1128px" alt="ConnectIdeia Hero" class="hero-image" />
+              <div class="image-overlay hero-image-overlay">
+                <div class="noise">
+                </div>
+              </div>
+            </div>
+            <div class="hero-content">
+              <div class="hero-top">
+                <div class="hero-text">
+                  <div class="hero-heading-wrapper">
+                    <h1 class="hero-heading">Turn ideas into<br>real businesses</h1>
+                  </div>
+                  <p class="hero-body">
+                    <strong class="hero-body-highlight">We build Apps, Landing Pages and AI Agents</strong>
+                    with strategic vision to generate real value for your business
+                  </p>
+                </div>
+                <a data-wf--primary-button--variant="large-dark" href="#" pop-up-open="cta" class="button w-inline-block">                <div>
+                  Analyze my business
+                </div>
+</a>
+                <p style="margin-top:-2.2rem;font-size:0.85rem;color:#9a9a9a;font-weight:400;">Free AI-powered analysis of your business. No strings attached.</p>
+              </div>
+              <div class="hero-ticker-wrapper">
+                <div class="hero-label">
+                  Our Projects
+                </div>
+                <div class="hero-ticker">
+                  <div class="hero-ticker-container">
+                    <img src="zera.png" class="hero-ticker-image" onclick="openProjectDrawer('zera')" alt="Zera Project" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #0f1a14 !important; padding: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="personalpro.png" class="hero-ticker-image" onclick="openProjectDrawer('personal-pro')" alt="Personal Pro" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #0a1428 !important; padding: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="maishumano.png" class="hero-ticker-image" onclick="openProjectDrawer('mais-humano')" alt="Mais Humano" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; background-color: #2a1b15 !important; padding: 15px !important; border-radius: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="imersao.png" class="hero-ticker-image" onclick="openProjectDrawer('imersao')" alt="Imersão Project" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #1a1025 !important; padding: 5px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="kaishi.png" class="hero-ticker-image" onclick="openProjectDrawer('kaishi')" alt="Kaishi" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; background-color: #5d0a0b !important; padding: 15px !important; border-radius: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                  </div>
+                  <div class="hero-ticker-container">
+                    <img src="zera.png" class="hero-ticker-image" onclick="openProjectDrawer('zera')" alt="Zera Project" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #0f1a14 !important; padding: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="personalpro.png" class="hero-ticker-image" onclick="openProjectDrawer('personal-pro')" alt="Personal Pro" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #0a1428 !important; padding: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="maishumano.png" class="hero-ticker-image" onclick="openProjectDrawer('mais-humano')" alt="Mais Humano" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; background-color: #2a1b15 !important; padding: 15px !important; border-radius: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="imersao.png" class="hero-ticker-image" onclick="openProjectDrawer('imersao')" alt="Imersão Project" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; border-radius: 20px !important; background-color: #1a1025 !important; padding: 5px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                    <img src="kaishi.png" class="hero-ticker-image" onclick="openProjectDrawer('kaishi')" alt="Kaishi" style="width: 250px !important; height: 250px !important; object-fit: contain !important; margin-right: 32px !important; background-color: #5d0a0b !important; padding: 15px !important; border-radius: 20px !important; box-sizing: border-box !important; flex-shrink: 0 !important; display: block !important;" />
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="separator-strip"></div>
+      <section header-theme="light" class="metrics">
+        <div class="container">
+          <div class="metrics-wrapper">
+            <div animate-trigger="" class="section-top">
+              <div animate="" class="eyebrow">
+                <div>
+                  Value Proposition
+                </div>
+              </div>
+              <h2 animate="" id="w-node-a9fd8d3c-cfc2-1631-1ff8-87c25ea613c9-12c616fe" class="section-heading">
+                <strong class="section-heading-highlight">                We connect entrepreneurs to the best solutions in technology, design and strategy
+</strong>
+                so you can focus on what matters while we handle the rest.
+              </h2>
+            </div>
+            <div animate-trigger="" class="metrics-grid">
+              <div animate="" class="metric-item">
+                <h3 class="metric">
+                  3x+
+                </h3>
+                <div class="separator light">
+                </div>
+                <div class="metric-label">
+                  Time-to-market
+                </div>
+              </div>
+              <div animate="" class="metric-item">
+                <h3 class="metric">
+                  50+
+                </h3>
+                <div class="separator light">
+                </div>
+                <div class="metric-label">
+                  Projects
+                </div>
+              </div>
+              <div animate="" class="metric-item">
+                <h3 class="metric">
+                  100%
+                </h3>
+                <div class="separator light">
+                </div>
+                <div class="metric-label">
+                  Core Business Focus
+                </div>
+              </div>
+              <div animate="" class="metric-item">
+                <h3 class="metric">
+                   15+
+                </h3>
+                <div class="separator light">
+                </div>
+                <div class="metric-label">
+                  Business Models
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="processo" header-theme="dark" class="sectors">
+        <div class="container">
+          <div class="sectors-wrapper">
+            <div class="images-column _1 active">
+              <div class="revealing-image">
+                <img src="./descoberta.jpg" loading="lazy" alt="Discovery stage" class="image" />
+                <div class="image-overlay active">
+                  <div class="noise">
+                  </div>
+                </div>
+              </div>
+              <div class="sectors-text-wrapper active">
+                <h3 class="sector-detail">
+                  Discovery
+                </h3>
+                <p class="sector-text">
+                  We map your vision and identify real opportunities for automation and scale through intelligent use of AI.
+                </p>
+              </div>
+            </div>
+            <div class="images-column _2">
+              <div class="revealing-image">
+                <img src="./validacao.jpg" loading="lazy" alt="Validation stage" class="image" />
+                <div class="image-overlay">
+                  <div class="noise">
+                  </div>
+                </div>
+              </div>
+              <div class="sectors-text-wrapper">
+                <h3 class="sector-detail">
+                  Validation
+                </h3>
+                <p class="sector-text">
+                  We confirm that everything uncovered in the discovery stage truly fits your goals, ensuring the solution meets your expectations precisely.
+                </p>
+              </div>
+            </div>
+            <div class="images-column _3">
+              <div class="revealing-image">
+                <img src="./planejamento.jpg" loading="lazy" alt="Planning stage" class="image" />
+                <div class="image-overlay">
+                  <div class="noise">
+                  </div>
+                </div>
+              </div>
+              <div class="sectors-text-wrapper">
+                <h3 class="sector-detail">
+                  Planning
+                </h3>
+                <p class="sector-text">
+                  We take what we've discovered and validated to build a detailed action plan, ensuring the best possible solution for your business.
+                </p>
+              </div>
+            </div>
+            <div class="images-column _4">
+              <div class="revealing-image">
+                <img src="./lancamento.jpg" loading="lazy" alt="Delivery stage" class="image" />
+                <div class="image-overlay">
+                  <div class="noise">
+                  </div>
+                </div>
+              </div>
+              <div class="sectors-text-wrapper">
+                <h3 class="sector-detail">
+                  Delivery
+                </h3>
+                <p class="sector-text">
+                  We launch your product with high visual fidelity, guaranteeing flawless performance and immediate value to your business.
+                </p>
+              </div>
+            </div>
+            <div class="sectors-list">
+              <div class="sector _1 active">
+                <div class="sector-number active">
+                  <div class="sector-count">
+                    01
+                  </div>
+                  <div class="sector-count dot active">
+                    .
+                  </div>
+                </div>
+                <h2 class="sector-heading active">
+                  Discovery
+                </h2>
+              </div>
+              <div class="separator">
+              </div>
+              <div class="sector _2">
+                <div class="sector-number">
+                  <div class="sector-count">
+                    02
+                  </div>
+                  <div class="sector-count dot">
+                    .
+                  </div>
+                </div>
+                <h2 class="sector-heading">
+                  Validation
+                </h2>
+              </div>
+              <div class="separator">
+              </div>
+              <div class="sector _3">
+                <div class="sector-number">
+                  <div class="sector-count">
+                    03
+                  </div>
+                  <div class="sector-count dot">
+                    .
+                  </div>
+                </div>
+                <h2 class="sector-heading">
+                  Planning
+                </h2>
+              </div>
+              <div class="separator">
+              </div>
+              <div class="sector _4">
+                <div class="sector-number">
+                  <div class="sector-count">
+                    04
+                  </div>
+                  <div class="sector-count dot">
+                    .
+                  </div>
+                </div>
+                <h2 class="sector-heading">
+                  Delivery
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section header-theme="dark" class="velocity">
+        <h2 class="velocity-heading">
+          Design that
+          <br />
+          connects
+        </h2>
+      </section>
+      <section id="para-quem-e" header-theme="dark" class="ecosystem">
+        <div class="container">
+          <div class="ecosystem-wrapper">
+            <div animate-trigger="" class="section-top">
+              <div animate="" class="eyebrow dark">
+                <div>
+                  Who it's for
+                </div>
+              </div>
+              <h2 animate="" id="w-node-f418a30e-815b-0790-08be-1a02f71f7570-12c616fe" class="section-heading dark">
+                <strong class="section-heading-highlight dark">                For those seeking the next level.
+                </strong>
+                Strategic infrastructure for those who don't settle for ordinary.
+              </h2>
+            </div>
+            <div animate-trigger="" class="ecosystem-grid">
+              <div animate="" class="ecosystem-card _1">
+                <div class="ecosystem-card-index">
+                  01
+                  <span class="ecosystem-card-index-dot">                  .
+</span>
+                </div>
+                <div class="ecosystem-text-wrapper">
+                  <h3 class="ecosystem-card-heading">
+                    Founders
+                  </h3>
+                  <p class="ecosystem-card-body">
+                    We turn your vision into a real product with the speed and design the market demands.
+                  </p>
+                </div>
+                <div class="noise soft">
+                </div>
+              </div>
+              <div animate="" class="ecosystem-card _2">
+                <div class="ecosystem-card-index">
+                  02
+                  <span class="ecosystem-card-index-dot">                  .
+</span>
+                </div>
+                <div class="ecosystem-text-wrapper">
+                  <h3 class="ecosystem-card-heading">
+                    Growing Companies
+                  </h3>
+                  <p class="ecosystem-card-body">
+                    We implement automations and AI solutions to sustain your accelerated, efficient growth.
+                  </p>
+                </div>
+                <div class="noise soft">
+                </div>
+              </div>
+              <div animate="" class="ecosystem-card _3">
+                <div class="ecosystem-card-index">
+                  03
+                  <span class="ecosystem-card-index-dot">                  .
+</span>
+                </div>
+                <div class="ecosystem-text-wrapper">
+                  <h3 class="ecosystem-card-heading">
+                    Entrepreneurs
+                  </h3>
+                  <p class="ecosystem-card-body">
+                    Delegate the technical complexity and design, focusing 100% on what actually drives results.
+                  </p>
+                </div>
+                <div class="noise soft">
+                </div>
+              </div>
+              <div animate="" class="ecosystem-card _4">
+                <div class="ecosystem-card-index">
+                  04
+                  <span class="ecosystem-card-index-dot">                  .
+</span>
+                </div>
+                <div class="ecosystem-text-wrapper">
+                  <h3 class="ecosystem-card-heading">
+                    Innovation Leaders
+                  </h3>
+                  <p class="ecosystem-card-body">
+                    We modernize the digital presence and processes of companies seeking agility and high visual impact.
+                  </p>
+                </div>
+                <div class="noise soft">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section animate-trigger="" header-theme="dark" class="voices">
+        <div class="container">
+          <div data-delay="4000" data-animation="slide" animate="" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+            <div class="voices-metrics">
+              <div class="voices-top">
+                <div class="voices-metric-heading">
+                  98%
+                </div>
+                <div class="voices-metric-body">
+                  Retention rate.
+                  <br />
+                  The absolute standard.
+                </div>
+              </div>
+            </div>
+            <div class="slider-mask w-slider-mask">
+              <div class="w-slide">
+                <div class="voice-wrapper">
+                  <p class="voice-text">
+                    "ConnectIdeia raised our delivery to a level that's hard to put into words. The strategic clarity and the care for design make every project feel unique and ahead of its time."
+                  </p>
+                  <div class="separator">
+                  </div>
+                  <div class="author">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" loading="lazy" alt="Marcus Hale" class="author-photo" />
+                    <div class="author-text">
+                      <div class="author-name">
+                        Marcus Hale
+                      </div>
+                      <div class="author-role">
+                        CEO, Vexora
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-slide">
+                <div class="voice-wrapper">
+                  <p class="voice-text">
+                    "The execution speed and the intelligence applied to the AI agents transformed our internal operations. What used to take months now happens in days."
+                  </p>
+                  <div class="separator">
+                  </div>
+                  <div class="author">
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afcb93874b345ce94f85dd_2.avif" loading="lazy" alt="Amanda Costa" class="author-photo" />
+                    <div class="author-text">
+                      <div class="author-name">
+                        Amanda Costa
+                      </div>
+                      <div class="author-role">
+                        COO, Elevate Digital
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-slide">
+                <div class="voice-wrapper">
+                  <p class="voice-text">
+                    "Validating our product vision has never been this fast. ConnectIdeia's consulting gave us the structural foundation to launch with full confidence and scale."
+                  </p>
+                  <div class="separator">
+                  </div>
+                  <div class="author">
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afcbe62418580e7ef1a770_33.avif" loading="lazy" alt="Bruno Oliveira" class="author-photo" />
+                    <div class="author-text">
+                      <div class="author-name">
+                        Bruno Oliveira
+                      </div>
+                      <div class="author-role">
+                        Founder, Velocity Startups
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-slide">
+                <div class="voice-wrapper">
+                  <p class="voice-text">
+                    "A rare kind of strategic partnership. They understand the business as well as we do and translate that into high-performance technology."
+                  </p>
+                  <div class="separator">
+                  </div>
+                  <div class="author">
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afcb940e2132cc3c0c5d04_4.avif" loading="lazy" alt="Juliana Silva" class="author-photo" />
+                    <div class="author-text">
+                      <div class="author-name">
+                        Juliana Silva
+                      </div>
+                      <div class="author-role">
+                        CMO, Tech Flow
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="arrow w-slider-arrow-left">
+              <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69aece6b7751a34fcfaf562d_left-arrow.svg" loading="lazy" width="18" alt="" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="arrow right w-slider-arrow-right">
+              <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69aecde6dc4d63ec15734919_left-arrow.svg" loading="lazy" width="18" alt="" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="slide-nav w-slider-nav w-slider-nav-invert">
+            </div>
+          </div>
+        </div>
+        <!-- 
+        <div class="logos-ticker">
+          <div class="logos-ticker-container">
+            <div class="logos-item">
+              <img loading="lazy" height="38" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd30d44268aee0d7e6ff0_1.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="64" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd33ce2b96ba7a528439c_2.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="56" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd376563ce2ef84fbade1_3.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="34" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd38f89ba3291762c0ed3_4.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="54" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3abedd6a4990970be45_5.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="52" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3cbedd6a4990970c1b0_6.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="50" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3e8de4fe5382be5c736_7.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+          </div>
+          <div class="logos-ticker-container">
+            <div class="logos-item">
+              <img loading="lazy" height="38" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd30d44268aee0d7e6ff0_1.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="64" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd33ce2b96ba7a528439c_2.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="56" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd376563ce2ef84fbade1_3.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="34" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd38f89ba3291762c0ed3_4.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="54" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3abedd6a4990970be45_5.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="52" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3cbedd6a4990970c1b0_6.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+            <div class="logos-item">
+              <img loading="lazy" height="50" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69afd3e8de4fe5382be5c736_7.avif" />
+              <div class="noise soft">
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+      </section>
+      
+      <!-- Seção de Autoridade Técnica (Tech Ticker) - Versão White Premium -->
+      <section class="tech-ticker-section" style="background-color: #ffffff; padding: 60px 0; padding-top: 120px; border-top: 1px solid rgba(0,0,0,0.03); border-bottom: 1px solid rgba(0,0,0,0.03); overflow: hidden; position: relative; margin-top: 50px;">
+        <div class="noise soft"></div>
+        <div class="tech-ticker-track" style="display: flex; white-space: nowrap; animation: tech-scroll 60s linear infinite;">
+          <div class="tech-ticker-item" style="display: flex; align-items: center; padding: 0 40px; font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 4px; color: rgba(16,16,16,0.5); font-weight: 500;">
+            AI INTEGRATION <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            STRATEGIC DESIGN <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            SCALABLE ARCHITECTURE <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            UX/UI ENGINEERING <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            GROWTH STRATEGY <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            CLOUD SYSTEMS <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            DATA INTELLIGENCE <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            MVP DEVELOPMENT
+          </div>
+          <!-- Duplicação para loop infinito -->
+          <div class="tech-ticker-item" style="display: flex; align-items: center; padding: 0 40px; font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 4px; color: rgba(16,16,16,0.5); font-weight: 500;">
+            AI INTEGRATION <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            STRATEGIC DESIGN <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            SCALABLE ARCHITECTURE <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            UX/UI ENGINEERING <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            GROWTH STRATEGY <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            CLOUD SYSTEMS <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            DATA INTELLIGENCE <span style="margin: 0 40px; opacity: 0.15;">/</span>
+            MVP DEVELOPMENT
+          </div>
+        </div>
+        
+        <style>
+          @keyframes tech-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        </style>
+      </section>
+      <section id="solucoes" header-theme="dark" class="protocol">
+        <div class="container no-padding">
+          <div class="protocol-wrapper">
+            <div animate-trigger="" class="section-top flex">
+              <div animate="" class="eyebrow-tight dark width-30">
+                <div>
+                  Services
+                </div>
+              </div>
+              <h2 animate="" id="w-node-e71326cc-bea1-4084-8e4c-a5a68995ca0d-12c616fe" class="section-heading l width-70">
+                Strategic solutions
+              </h2>
+            </div>
+            <div class="protocol-inner">
+              <div class="protocol-phase-list">
+                <div class="protocol-phase">
+                  <div class="protocol-phase-top">
+                    <div class="protocol-phase-label">
+                      Solution 01
+                    </div>
+                    <div class="protocol-phase-indicator-stack">
+                      <div class="protocol-phase-indicator active">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="protocol-phase-text">
+                    <h3 class="protocol-phase-heading">
+                      Apps &
+                      <br />
+                      Platforms
+                    </h3>
+                    <p class="protocol-phase-body">
+                      <strong>Your business idea needs more than code — it needs strategy, design and technology working as one.</strong>
+                      We build custom web and mobile applications (PWA, native apps, dashboards) with scalable architecture and AI integrated from day one.
+                    </p>
+                  </div>
+                </div>
+                <div class="protocol-phase">
+                  <div class="protocol-phase-top">
+                    <div class="protocol-phase-label">
+                      Solution 02
+                    </div>
+                    <div class="protocol-phase-indicator-stack">
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator active">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="protocol-phase-text">
+                    <h3 class="protocol-phase-heading">
+                      Landing
+                      <br />
+                      Pages
+                    </h3>
+                    <p class="protocol-phase-body">
+                      <strong>First impressions are everything. We craft landing pages strategically designed to convert.</strong>
+                      We combine premium design, persuasive copy and extreme performance optimization (SEO and lightning-fast loading) to make your offer irresistible.
+                    </p>
+                  </div>
+                </div>
+                <div class="protocol-phase">
+                  <div class="protocol-phase-top">
+                    <div class="protocol-phase-label">
+                      Solution 03
+                    </div>
+                    <div class="protocol-phase-indicator-stack">
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator active">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="protocol-phase-text">
+                    <h3 class="protocol-phase-heading">
+                      Automations
+                      <br />
+                      & AI
+                    </h3>
+                    <p class="protocol-phase-body">
+                      <strong>Artificial Intelligence is no longer the future — it's today's competitive edge.</strong>
+                      We deploy intelligent agents and powerful automations that work 24/7 for your business, cutting costs and boosting operational efficiency.
+                    </p>
+                  </div>
+                </div>
+                <div class="protocol-phase last">
+                  <div class="protocol-phase-top">
+                    <div class="protocol-phase-label">
+                      Solution 04
+                    </div>
+                    <div class="protocol-phase-indicator-stack">
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator">
+                      </div>
+                      <div class="protocol-phase-indicator active">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="protocol-phase-text">
+                    <h3 class="protocol-phase-heading">
+                      Consulting
+                      <br />
+                      & Growth
+                    </h3>
+                    <p class="protocol-phase-body">
+                      <strong>We don't just deliver technology — we deliver clear strategy and scale.</strong>
+                      We support your product from concept to launch, identifying growth opportunities and securing real return on investment.
+                    </p>
+                  </div>
+                </div>
+                <div class="noise soft">
+                </div>
+              </div>
+              <div class="protocol-image-wrapper">
+                <img src="./efeito.png" loading="lazy" alt="Visual representation of ConnectIdeia solutions" class="protocol-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 
+      <section id="archive" header-theme="dark" class="archive">
+        <div class="container no-padding">
+          <div class="archive-wrapper">
+            <div class="archive-sticky-heading">
+              <h2 class="section-heading l">
+                Archive
+              </h2>
+            </div>
+            <div class="archive-photos">
+              <div class="archive-photos-row">
+                <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b012735b7c8117ca608753_Ethereal%20Motion%20Portrait.avif" loading="lazy" sizes="(max-width: 904px) 100vw, 904px, 100vw" srcset="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b012735b7c8117ca608753_Ethereal%20Motion%20Portrait-p-500.avif 500w, https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b012735b7c8117ca608753_Ethereal%20Motion%20Portrait.avif 904w" alt="An ethereal portrait of a person in a white flowing garment, captured mid-motion with digital glitch effects and sparkling light particles dissolving into a bright, misty background." class="archive-photo" />
+              </div>
+              <div class="archive-photos-row left-aligned">
+                <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b013173a449e6dcd3d5d9b_Exotic-flower-frozen.avif" loading="lazy" sizes="(max-width: 1020px) 100vw, 1020px, 100vw" srcset="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b013173a449e6dcd3d5d9b_Exotic-flower-frozen-p-500.avif 500w, https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b013173a449e6dcd3d5d9b_Exotic-flower-frozen-p-800.avif 800w, https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b013173a449e6dcd3d5d9b_Exotic-flower-frozen.avif 1020w" alt="A macro photograph of a delicate, translucent glass-like flower with iridescent petals glowing with blue and gold light, resting on a dark, cracked earth surface." class="archive-photo _2" />
+              </div>
+              <div class="archive-photos-row space-between">
+                <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0139d77700b0ba3f6cc0f_Futuristic%20Fashion%20Pose.avif" loading="lazy" sizes="(max-width: 904px) 100vw, 904px, 100vw" srcset="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0139d77700b0ba3f6cc0f_Futuristic%20Fashion%20Pose-p-500.avif 500w, https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0139d77700b0ba3f6cc0f_Futuristic%20Fashion%20Pose.avif 904w" alt="A high-fashion editorial portrait of a woman with red hair wearing an intricate, cage-like white garment with wire accents, set against a black background with bold diagonal light panels." class="archive-photo _3" />
+                <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b013b1f606e0d9c44d2e56_A%20man%20exploring%20a%20creative%20AI-generated%20environment.avif" loading="lazy" alt="A cinematic silhouette of a person walking through a vast, minimalist architectural space filled with soft fog and glowing orange laser lines against a cool blue-gray atmosphere." class="archive-photo _4" />
+              </div>
+              <div class="archive-photos-row">
+                <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b01452dc2b6df1f56b77eb_Surreal%20Glass%20Forms.avif" loading="lazy" sizes="(max-width: 904px) 100vw, 904px, 100vw" srcset="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b01452dc2b6df1f56b77eb_Surreal%20Glass%20Forms-p-500.avif 500w, https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b01452dc2b6df1f56b77eb_Surreal%20Glass%20Forms.avif 904w" alt="An abstract 3D composition of floating, translucent liquid orbs that glow with blue and orange light reflections against a dark, moody background." class="archive-photo _5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <!-- 
+      <section id="access" header-theme="light" class="access">
+        <div class="container">
+          <div class="access-wrapper">
+            <div animate-trigger="" class="section-top _3-columns">
+              <div animate="" class="eyebrow">
+                <div>
+                  Access
+                </div>
+              </div>
+              <h2 animate="" id="w-node-c42f1bab-fef4-cff0-8f87-3b68bd260357-12c616fe" class="section-heading max-width-660">
+                <strong class="section-heading-highlight">                Define your scale.
+</strong>
+                Infrastructure built for production at volume.
+              </h2>
+            </div>
+            <div class="pricing-wrapper">
+              <div animate-trigger="" class="pricing-toggle-wrapper">
+                <div animate="" id="w-node-_749d5c8e-b274-c2b8-e3de-19be7bcf36ed-12c616fe" class="pricing-toggle">
+                  <div class="pricing-toggle-tab monthly active">
+                    Monthly
+                  </div>
+                  <div class="pricing-toggle-tab annual">
+                    Annual
+                  </div>
+                  <div class="pricing-toggle-filler">
+                  </div>
+                </div>
+              </div>
+              <div animate-trigger="" plans-variant="monthly" data-wf--plans--variant="monthly" class="plans">
+                <div animate="" class="plan">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Studio
+                            </h3>
+                            <div class="plan-label">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          Essential infrastructure for independent architects of vision
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $49
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Infinite generation queue
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Commercial usage rights
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Standard rendering velocity
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          4K uncompressed export
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Single user license
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-ghost" href="#cta" class="button w-variant-d4f448d0-e2d8-ca89-1c8f-21896927dfa4 w-inline-block">                  <div>
+                    Analyze my business
+                  </div>
+</a>
+                </div>
+                <div animate="" class="plan recommended">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Agency
+                            </h3>
+                            <div class="plan-label active">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          High-throughput systems for teams demanding absolute precision
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $199
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Everything in Studio, plus:
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Priority rendering (0.4s latency)
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          8K ultra-fidelity export
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          5 team seats included
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Private &#34;Stealth Mode&#34; generation
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Priority editorial support
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-light" href="#cta" class="button w-variant-11adb117-e3cb-4e9d-919b-7b2bcaa4cff5 w-inline-block">                  <div>
+                    Analyze my business
+                  </div>
+</a>
+                </div>
+                <div animate="" class="plan">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Global
+                            </h3>
+                            <div class="plan-label">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          Dedicated computation designed for global-scale deployment
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $899
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Everything in Agency, plus:
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Dedicated GPU nodes
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Custom model fine-tuning
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          API access for deployment
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Unlimited team seats
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          24/7 Dedicated account manager
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-ghost" href="#cta" class="button w-variant-d4f448d0-e2d8-ca89-1c8f-21896927dfa4 w-inline-block">                  <div>
+                    Contact sales
+                  </div>
+</a>
+                </div>
+              </div>
+              <div animate-trigger="" plans-variant="annual" data-wf--plans--variant="annual" class="plans w-variant-a3da16dd-a3ce-2427-e99e-400df3d34b2b">
+                <div animate="" class="plan">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Studio
+                            </h3>
+                            <div class="plan-label">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          Essential infrastructure for independent architects of vision
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $39
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Infinite generation queue
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Commercial usage rights
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Standard rendering velocity
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          4K uncompressed export
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Single user license
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-ghost" href="#cta" class="button w-variant-d4f448d0-e2d8-ca89-1c8f-21896927dfa4 w-inline-block">                  <div>
+                    Analyze my business
+                  </div>
+</a>
+                </div>
+                <div animate="" class="plan recommended">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Agency
+                            </h3>
+                            <div class="plan-label active">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          High-throughput systems for teams demanding absolute precision
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $179
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Everything in Studio, plus:
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Priority rendering (0.4s latency)
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          8K ultra-fidelity export
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          5 team seats included
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Private &#34;Stealth Mode&#34; generation
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Priority editorial support
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-light" href="#cta" class="button w-variant-11adb117-e3cb-4e9d-919b-7b2bcaa4cff5 w-inline-block">                  <div>
+                    Analyze my business
+                  </div>
+</a>
+                </div>
+                <div animate="" class="plan">
+                  <div class="plan-wrapper">
+                    <div class="plan-top">
+                      <div class="plan-text">
+                        <div class="plan-header">
+                          <div class="plan-name-wrapper">
+                            <h3 class="plan-name">
+                              Global
+                            </h3>
+                            <div class="plan-label">
+                              Recommended
+                            </div>
+                          </div>
+                          <div class="plan-indicator-stack">
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                            <div class="plan-indicator active">
+                            </div>
+                          </div>
+                        </div>
+                        <p class="plan-body">
+                          Dedicated computation designed for global-scale deployment
+                        </p>
+                      </div>
+                      <div class="plan-price-wrapper">
+                        <div class="plan-price">
+                          $799
+                        </div>
+                        <div class="plan-price-suffix">
+                          /month
+                        </div>
+                      </div>
+                    </div>
+                    <div class="separator light">
+                    </div>
+                    <ul role="list" class="plan-list w-list-unstyled">
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Everything in Agency, plus:
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Dedicated GPU nodes
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Custom model fine-tuning
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          API access for deployment
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          Unlimited team seats
+                        </div>
+                      </li>
+                      <li class="plan-list-item">
+                        <img loading="lazy" height="13" alt="" src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b0272e400720d125e8b0d6_Checkmark.svg" />
+                        <div>
+                          24/7 Dedicated account manager
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a data-wf--primary-button--variant="small-ghost" href="#cta" class="button w-variant-d4f448d0-e2d8-ca89-1c8f-21896927dfa4 w-inline-block">                  <div>
+                    Contact sales
+                  </div>
+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <!-- 
+      <section id="insight" header-theme="dark" class="insight">
+        <div class="container">
+          <div class="insight-wrapper">
+            <div animate-trigger="" class="insight-section-top">
+              <div animate="" class="eyebrow-tight dark">
+                <div>
+                  Insight
+                </div>
+              </div>
+              <h2 animate="" id="w-node-_76c3fe45-d075-3b6c-fab3-2e28f8e51423-12c616fe" class="section-heading l">
+                Theory of perception
+              </h2>
+            </div>
+            <div class="w-dyn-list">
+              <div animate-trigger="" role="list" class="insights w-dyn-items">
+                <div animate="" role="listitem" class="insight-card w-dyn-item">
+                  <a aria-label="The 10 commandments of visual hierarchy" href="/insight/the-10-commandments-of-visual-hierarchy" class="insight-card-content w-inline-block">                  <img src="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b24cb6c6e73a22459b3e8f_Abstract%20Portrait%20with%20Blurred%20Overlay.avif" loading="lazy" alt="The 10 commandments of visual hierarchy" class="insight-card-image" />
+                  <div class="insight-card-text">
+                    <div class="insight-card-date">
+                      Mar 12, 2026
+                    </div>
+                    <h3 class="insight-card-heading">
+                      The 10 commandments of visual hierarchy
+                    </h3>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                  <div class="screen-reader-only">
+                    View Insight
+                  </div>
+</a>
+                </div>
+                <div animate="" role="listitem" class="insight-card w-dyn-item">
+                  <a aria-label="Systems architecture: scaling at speed" href="/insight/systems-architecture-scaling-at-speed" class="insight-card-content w-inline-block">                  <img src="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b26fe10f2220fc1d439d27_Silhouette%20Abstract%20Art.avif" loading="lazy" alt="Systems architecture: scaling at speed" class="insight-card-image" />
+                  <div class="insight-card-text">
+                    <div class="insight-card-date">
+                      Mar 12, 2026
+                    </div>
+                    <h3 class="insight-card-heading">
+                      Systems architecture: scaling at speed
+                    </h3>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                  <div class="screen-reader-only">
+                    View Insight
+                  </div>
+</a>
+                </div>
+                <div animate="" role="listitem" class="insight-card w-dyn-item">
+                  <a aria-label="Synthetic intelligence: a new paradigm" href="/insight/synthetic-intelligence-a-new-paradigm" class="insight-card-content w-inline-block">                  <img src="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b2708828828c64816bcdfb_Golden%20Wheat%20Portrait.avif" loading="lazy" alt="Synthetic intelligence: a new paradigm" sizes="100vw" srcset="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b2708828828c64816bcdfb_Golden%20Wheat%20Portrait-p-500.avif 500w, https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b2708828828c64816bcdfb_Golden%20Wheat%20Portrait.avif 904w" class="insight-card-image" />
+                  <div class="insight-card-text">
+                    <div class="insight-card-date">
+                      Mar 12, 2026
+                    </div>
+                    <h3 class="insight-card-heading">
+                      Synthetic intelligence: a new paradigm
+                    </h3>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                  <div class="screen-reader-only">
+                    View Insight
+                  </div>
+</a>
+                </div>
+                <div animate="" role="listitem" class="insight-card w-dyn-item">
+                  <a aria-label="The considered return to digital silence" href="/insight/the-considered-return-to-digital-silence" class="insight-card-content w-inline-block">                  <img src="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b270be4aa377502ebf14cf_Ethereal%20Orb%20Scene.avif" loading="lazy" alt="The considered return to digital silence" sizes="100vw" srcset="https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b270be4aa377502ebf14cf_Ethereal%20Orb%20Scene-p-500.avif 500w, https://cdn.prod.website-files.com/69b24c979c4b60ca34a1d81c/69b270be4aa377502ebf14cf_Ethereal%20Orb%20Scene.avif 904w" class="insight-card-image" />
+                  <div class="insight-card-text">
+                    <div class="insight-card-date">
+                      Mar 12, 2026
+                    </div>
+                    <h3 class="insight-card-heading">
+                      The considered return to digital silence
+                    </h3>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                  <div class="screen-reader-only">
+                    View Insight
+                  </div>
+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <section header-theme="dark" class="faq">
+        <div class="container no-padding">
+          <div animate-trigger="" class="faq-wrapper">
+            <div animate="" class="faq-content">
+              <div class="faq-top">
+                <div class="faq-section-heading">
+                  FAQ
+                </div>
+                <div class="faq-section-intro">
+                  Strategic clarity.
+                  <br />
+                  Eliminating technological friction.
+                </div>
+              </div>
+            </div>
+            <div animate="" id="w-node-ac6c19c4-bdd9-8939-66ee-4528d298e221-12c616fe" class="faq-list">
+              <div class="faqs">
+                <!-- Item 1 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      What sets a ConnectIdeia ecosystem apart from a regular website?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      A regular website is static. Our ecosystem is dynamic, integrated with AI for lead qualification and process automation, focused on high-level conversion and user experience.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      Do I need to understand technology or AI to manage the project?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      No. We deliver turnkey solutions. We manage all the technological complexity, so you can focus exclusively on the strategy and growth of your business.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      Will the code and the infrastructure be my property?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      Absolutely. All assets, code and integrations belong to your company. We don't lock you into proprietary platforms — your independence is guaranteed.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      How long until my ecosystem is up and running?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      We work in high-performance sprints. Unlike traditional agencies, we can get your strategic structure operational in just a few weeks — without compromising technical rigor.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="faq-item">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      How does post-launch support work?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      We offer continuous strategic support. Our goal isn't just to deliver and disappear — it's to ensure your ecosystem evolves as your demand scales.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="faq-item last">
+                  <div class="faq-question">
+                    <h3 class="faq-heading">
+                      Are the AI solutions generic or customized?
+                    </h3>
+                    <img src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/69b12b1a5b251dd705fadfe6_Plus.svg" loading="lazy" alt="" class="faq-plus-icon" />
+                  </div>
+                  <div class="faq-answer-wrapper">
+                    <p class="faq-answer">
+                      Fully customized. Every AI agent and automation is trained and configured specifically for your business model — respecting your tone of voice and conversion goals.
+                    </p>
+                  </div>
+                  <div class="noise soft">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contato" header-theme="dark" class="cta">
+        <div class="container no-padding">
+          <div class="cta-wrapper">
+            <div id="w-node-c5f7c572-b452-cc2c-f879-509a246ce320-246ce31d" class="cta-image-wrapper">
+              <img src="./whatsapp.jpg" loading="lazy" alt="Direct WhatsApp connection" class="cta-image" />
+            </div>
+            <div id="w-node-c5f7c572-b452-cc2c-f879-509a246ce322-246ce31d" class="cta-content">
+              <div animate-trigger="" class="form-wrapper">
+                <h2 animate="" class="section-heading dark">
+                  <strong class="section-heading-highlight dark">                  Take the next step.
+</strong>
+                  Turn your vision into an elite digital ecosystem.
+                </h2>
+                <div animate="" class="form-block w-form">
+                  <form id="wf-form-CTA-Form" name="wf-form-CTA-Form" data-name="CTA Form" method="get" class="form" onsubmit="handleCtaForm(event)">
+                    <div class="form-inputs">
+                      <div class="form-input">
+                        <label for="name" class="input-label">
+                          Full name
+                        </label>
+                        <input class="input-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Your name" type="text" id="name" required="" />
+                      </div>
+                      <div class="form-input">
+                        <label for="email" class="input-label">
+                          Business email
+                        </label>
+                        <input class="input-field w-input" maxlength="256" name="email" data-name="Email" placeholder="you@company.com" type="email" id="email" required="" />
+                      </div>
+                    </div>
+                    <button type="button" id="ctaSubmitBtn" class="button w-button" style="width:100%; display:block;">Message on WhatsApp</button>
+                  </form>
+                  <div class="success-message w-form-done">
+                    <div style="color: #040404;">
+                      Thanks! Opening WhatsApp so we can start the analysis...
+                    </div>
+                  </div>
+                  <div class="error-message w-form-fail">
+                    <div>
+                      Oops! Something went wrong while submitting the form.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-consent">
+                By submitting, you agree to our
+                <a href="/terms-of-service" class="consent-link">                Terms
+</a>
+                and
+                <a href="/privacy-policy" class="consent-link">                Privacy Policy
+</a>
+                .
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="noise soft">
+        </div>
+      </section>
+      <footer header-theme="dark" class="footer">
+        <div class="container no-padding">
+          <div class="footer-wrapper">
+            <div class="footer-top">
+              <div class="footer-content">
+                <p class="footer-body"><strong class="footer-body-highlight">Strategic solutions for visionary minds.</strong> We build elite digital ecosystems with artificial intelligence integrated from day one.</p>
+                <div class="socials">
+                  <a href="mailto:contato@connectideia.com" class="social-link" title="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" class="social-link" title="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  </a>
+                  <a href="https://x.com/" target="_blank" class="social-link" title="X">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/" target="_blank" class="social-link" title="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </a>
+                </div>
+              </div>
+              <div id="w-node-_3c8645f9-e17e-63ac-8b6f-3979eeb9d3da-eeb9d3c8" class="footer-logo-wrapper">
+                <span style="display:flex;align-items:center;justify-content:flex-end;font-size:48px;letter-spacing:-0.02em;font-weight:500;color:white;">ConnectIde<svg style="width:0.72em;height:0.72em;margin-left:3px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M 10 35 L 10 85 L 50 15 L 90 85 L 50 60 L 30 72.5" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="15" r="6.5" fill="currentColor"/></svg></span>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-copyright">
+                © 2026 ConnectIdeia. All rights reserved.
+              </div>
+              <div class="footer-legal">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69365cd8c75712dd12c61654" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/js/webflow.c1e308f20.js" type="text/javascript"></script>
+    
+    <script>
+      const projectData = {
+          'zera': {
+              title: 'ZERA - ESG Landing Page',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: 'https://zera.eco.br',
+              steps: [
+                  { t: 'Discovery & Research', d: 'In-depth analysis of the carbon credits and ESG market, surfacing the latent pain of companies seeking transparency and simplicity in decarbonization.' },
+                  { t: 'Delivery & Architecture', d: 'Design focused on \'Eco-Transparency\', translating complex data into intuitive dashboards and a scalable architecture.' },
+                  { t: 'Launch Planning', d: 'Go-to-Market strategy built around authority and trust for the sustainability sector.' }
+              ]
+          },
+          'mais-humano': {
+              title: 'MAIS HUMANO',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: 'https://maishumano.com.br',
+              steps: [
+                  { t: 'Discovery & JTBD Strategy', d: 'Research grounded in Jobs to Be Done. Focus on delivering emotional value over features: helping parents rebuild a deeper, more genuine connection with their children.' },
+                  { t: 'Warm Design & Conversion', d: 'High-conversion funnel engineering paired with a \'Warm Design\'. A human, empathetic interface that breaks objections and conveys immediate trust to family audiences.' },
+                  { t: 'Value Delivery & Impact', d: 'Persuasion architecture built around behavioral triggers, creating a digital positioning that turns visitors with latent pains into engaged users.' }
+              ]
+          },
+          'personal-pro': {
+              title: 'PERSONAL PRO - Mobile App',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: '#',
+              steps: [
+                  { t: 'Discovery & Strategy', d: 'Applying the JTBD methodology to map the real journey of athletes and personal trainers, eliminating friction points.' },
+                  { t: 'Performance Design', d: 'A high-performance interface with a premium visual identity, crafted to elevate the brand\'s perceived value in the fitness market.' },
+                  { t: 'Digital Scalability', d: 'Analysis focused on retention and scalability, turning the app into a high-value digital asset.' }
+              ]
+          },
+          'kaishi': {
+              title: 'KAISHI - FinTech Solution',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: 'https://kaishi.com.br',
+              steps: [
+                  { t: 'Multi-Unit Architecture', d: 'Robust engineering to support cash flow and audit across 20+ simultaneous units without losing performance.' },
+                  { t: 'Data Complexity', d: 'Surgical isolation of critical permissions and governance of sensitive data across management levels.' },
+                  { t: 'Global Flow', d: 'Automated, real-time consolidation of global cash flow for strategic decision-making.' }
+              ]
+          },
+          'fine-and-you': {
+              title: 'FINE AND YOU - Luxury Store',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: 'https://fineandyou.com.br',
+              steps: [
+                  { t: 'Premium Aesthetics', d: 'Strategic use of negative space and refined typography to create a deeply sophisticated luxury experience.' },
+                  { t: 'Elite User Experience', d: 'Architecture designed to guide the high-end consumer straight to exclusive conversion.' },
+                  { t: 'Visual Authority', d: 'Harmonic palettes and visual curation to elevate the brand to the top of luxury perception.' }
+              ]
+          },
+          'imersao': {
+              title: 'IMERSÃO FINE & YOU',
+              color: 'rgba(255, 255, 255, 0.9)',
+              link: 'https://imersao.fineandyou.com.br',
+              steps: [
+                  { t: 'High-Conversion Focus', d: 'Architecting a relentless visual funnel. The landing page was designed primarily to hold the lead\'s attention from the first scroll to the last.' },
+                  { t: 'Visual Direction', d: 'Refined hierarchy and contrast guide the user\'s eye smoothly through the narrative, optimizing reading flow.' },
+                  { t: 'Aesthetic Performance', d: 'An immersive interface combining graphic beauty with clean, responsive design — focused exclusively on maximizing event capture rate.' }
+              ]
+          },
+          'tordilha': {
+              title: 'Tordilha - HealthTech',
+              color: '#a9a9a9',
+              link: 'https://tordilha.com.br',
+              steps: [
+                  { t: 'Multiple Journeys', d: 'Interconnected flows for Management, Therapists and Equine Therapy Practitioners.' },
+                  { t: 'Scheduling Management', d: 'Robust system for centralized schedule management and secure clinical data.' },
+                  { t: 'Evolution Metrics', d: 'Dashboards that cross clinical performance with real patient evolution.' }
+              ]
+          }
+      };
+
+      function openProjectDrawer(id) {
+          const data = projectData[id];
+          if (!data) return;
+
+          const content = document.getElementById('drawer-content');
+          const drawer = document.getElementById('project-drawer');
+          const link = document.getElementById('drawer-link');
+
+          content.innerHTML = `
+              <h2 class="drawer-title">${data.title}</h2>
+              ${data.steps.map((s, i) => `
+                  <div class="drawer-step">
+                      <div class="drawer-step-num" style="color: ${data.color}">0${i+1}. ${s.t.toUpperCase()}</div>
+                      <div class="drawer-step-desc">${s.d}</div>
+                  </div>
+              `).join('')}
+          `;
+          link.href = data.link;
+          drawer.classList.add('open');
+          if (window.lenis) window.lenis.stop();
+      }
+
+      function closeProjectDrawer() {
+          document.getElementById('project-drawer').classList.remove('open');
+          if (window.lenis) window.lenis.start();
+      }
+
+      document.querySelectorAll('.hero-ticker-card').forEach(card => {
+          card.addEventListener('click', () => {
+              const id = card.getAttribute('data-project');
+              if (id) openProjectDrawer(id);
+          });
+      });
+
+    </script>
+      </footer>
+    </main>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69365cd8c75712dd12c61654" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/js/webflow.schunk.6138fab53691073c.js" type="text/javascript" integrity="sha384-Hr3BOMuCiy9yew5zMaWT35xKbL+67rZ1dVJw2KlehmLKTwK4HYnUFfD+Qt6h55jE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.prod.website-files.com/69365cd8c75712dd12c61654/js/webflow.1cf69bfb.020859ed383de018.js" type="text/javascript" integrity="sha384-9PnqkpclX5+0ZRp1yR2Cf7yibjisf+Gbkr547jSP3oJTF1Z/HODbpZDx0MIdr27Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript">
+    </script>
+    <script src="https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript">
+    </script>
+    <script src="https://cdn.prod.website-files.com/gsap/3.14.2/CustomEase.min.js" type="text/javascript">
+    </script>
+    <!-- =============================================
+         CI — POP-UP OVERLAY CSS
+         ============================================= -->
+    <style>
+        [pop-up="cta"] {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99998;
+            background: rgba(4,4,4,0.6);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        [pop-up="cta"].is-open { display: flex; }
+        .pop-up_cta_form-block { width: 100%; max-width: 680px; }
+        .pop-up_cta_form-block_form { width: 100%; }
+        .pop-up_cta_c {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .pop-up_cta_modal, #ciFlowModal {
+            background: #ECECEC;
+            border-radius: 20px;
+            width: 680px;
+            max-width: 100%;
+            position: relative;
+            overflow: visible;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.35);
+        }
+        .pop-up_overlay {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            cursor: pointer;
+        }
+        .pop-up_cta_form-block_success,
+        .pop-up_cta_form-block_error { display: none !important; }
+        html.ci-modal-open,
+        body.ci-modal-open { overflow: hidden !important; overscroll-behavior: none !important; }
+    </style>
+
+    <!-- =============================================
+         CI — POP-UP MODAL HTML
+         ============================================= -->
+    <div pop-up="cta" class="pop-up_cta">
+        <div class="pop-up_cta_form-block w-form">
+            <form id="wf-form-Book-the-Flight" name="wf-form-Book-the-Flight" data-name="Book the Flight"
+                method="get" class="pop-up_cta_form-block_form" onsubmit="return false;">
+                <div pop-up-main="cta" class="pop-up_cta_c">
+                    <div class="pop-up_cta_modal" id="ciFlowModal">
+
+                        <!-- Barra de progresso -->
+                        <div class="ci-flow-progress-bar">
+                            <div class="ci-flow-progress-fill" id="ciProgressFill"></div>
+                        </div>
+
+                        <!-- Container dos steps -->
+                        <div class="ci-flow-track-wrapper">
+                            <div class="ci-flow-track" id="ciFlowTrack">
+
+                                <!-- STEP 1: Email -->
+                                <div class="ci-flow-step" data-step="0">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 1 OF 6</span>
+                                            <p class="ci-flow-question">I'll analyze your business with AI. To send the diagnosis, what's your best email?</p>
+                                        </div>
+                                        <div class="ci-flow-right ci-flow-right--input">
+                                            <div class="ci-flow-input-group">
+                                                <input class="ci-flow-input" id="ciInputEmail" type="email" placeholder="e.g. hello@yourcompany.com" autocomplete="email" />
+                                                <button type="button" class="ci-flow-submit-btn" id="ciSubmitEmail">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </button>
+                                            </div>
+                                            <span class="ci-flow-hint ci-flow-hint--error" id="ciEmailError"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 2: Phase -->
+                                <div class="ci-flow-step" data-step="1">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 2 OF 6</span>
+                                            <p class="ci-flow-question">What stage is your project at right now?</p>
+                                        </div>
+                                        <div class="ci-flow-right">
+                                            <div class="ci-flow-options">
+                                                <button type="button" class="ci-flow-opt" data-value="Idea / Early stage">Idea / Early stage</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Operating">Operating</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Scaling">Scaling</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 3: Bottleneck -->
+                                <div class="ci-flow-step" data-step="2">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 3 OF 6</span>
+                                            <p class="ci-flow-question">What's your biggest bottleneck right now?</p>
+                                        </div>
+                                        <div class="ci-flow-right">
+                                            <div class="ci-flow-options">
+                                                <button type="button" class="ci-flow-opt" data-value="Build a high-converting LP">Converting LP</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Build an App/PWA">App / PWA</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Automate processes">Automate</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Full ecosystem">Ecosystem</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 4: Site -->
+                                <div class="ci-flow-step" data-step="3">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 4 OF 6</span>
+                                            <p class="ci-flow-question">Send me a link to your website or social media.</p>
+                                        </div>
+                                        <div class="ci-flow-right ci-flow-right--input">
+                                            <div class="ci-flow-input-group">
+                                                <input class="ci-flow-input" id="ciInputSite" type="url" placeholder="e.g. yourcompany.com" autocomplete="off" />
+                                                <button type="button" class="ci-flow-submit-btn" id="ciSubmitSite">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </button>
+                                            </div>
+                                            <span class="ci-flow-hint">We'll analyze your business with AI</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 5: AI Analysis -->
+                                <div class="ci-flow-step ci-flow-step--analysis" data-step="4" id="ciStepAnalysis">
+                                    <div class="ci-flow-step-inner ci-flow-step-inner--analysis">
+                                        <div class="ci-flow-analysis-content" id="ciAnalysisContent">
+                                            <div class="ci-flow-loading" id="ciAnalysisLoading">
+                                                <div class="ci-flow-loading-dots"><span></span><span></span><span></span></div>
+                                                <span class="ci-flow-loading-text">Analyzing your business...</span>
+                                            </div>
+                                            <div class="ci-flow-analysis-results" id="ciAnalysisResults" style="display:none;">
+                                                <div class="ci-flow-analysis-item" id="ciAnalysisNegocio"></div>
+                                                <div class="ci-flow-analysis-item" id="ciAnalysisGap"></div>
+                                                <div class="ci-flow-analysis-item" id="ciAnalysisAcao"></div>
+                                                <button type="button" class="ci-flow-analysis-next" id="ciAnalysisNext">Makes sense &#8212; continue &#8594;</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 6: Timing -->
+                                <div class="ci-flow-step" data-step="5">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 5 OF 6</span>
+                                            <p class="ci-flow-question">What's your time priority?</p>
+                                        </div>
+                                        <div class="ci-flow-right">
+                                            <div class="ci-flow-options">
+                                                <button type="button" class="ci-flow-opt" data-value="Yesterday (Maximum urgency)">Yesterday</button>
+                                                <button type="button" class="ci-flow-opt" data-value="In the next few weeks">Next weeks</button>
+                                                <button type="button" class="ci-flow-opt" data-value="Structuring the next step">Planning</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 7: WhatsApp -->
+                                <div class="ci-flow-step" data-step="6">
+                                    <div class="ci-flow-step-inner">
+                                        <div class="ci-flow-left">
+                                            <span class="ci-flow-counter">STEP 6 OF 6</span>
+                                            <p class="ci-flow-question">Your WhatsApp with country code so our team can reach out?</p>
+                                        </div>
+                                        <div class="ci-flow-right ci-flow-right--input">
+                                            <div class="ci-flow-input-group">
+                                                <input class="ci-flow-input" id="ciInputWhatsapp" type="tel" placeholder="e.g. +1 555 555 5555" autocomplete="tel" />
+                                                <button type="button" class="ci-flow-submit-btn" id="ciSubmitWhatsapp">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </button>
+                                            </div>
+                                            <span class="ci-flow-hint ci-flow-hint--error" id="ciWhatsappError"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP 8: End -->
+                                <div class="ci-flow-step ci-flow-step--end" data-step="7">
+                                    <div class="ci-flow-step-inner ci-flow-step-inner--end">
+                                        <p class="ci-flow-end-title">&#10003; Got it!</p>
+                                        <p class="ci-flow-end-sub">Our team will reach out shortly with your full diagnosis.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div pop-up-success="cta" class="pop-up_cta_form-block_success w-form-done" style="display:none;"></div>
+            <div class="pop-up_cta_form-block_error w-form-fail" style="display:none;"></div>
+        </div>
+        <div pop-up-close="cta" pop-up-over="cta" class="pop-up_overlay"></div>
+    </div>
+
+    <!-- =============================================
+         CI FLOW — CSS
+         ============================================= -->
+    <style>
+        /* ── Progresso ─────────────────────────── */
+        .ci-flow-progress-bar {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: rgba(0,0,0,0.08);
+            z-index: 10;
+        }
+        .ci-flow-progress-fill {
+            height: 100%;
+            background: #0f0f0f;
+            width: 0%;
+            transition: width 0.5s cubic-bezier(0.16,1,0.3,1);
+        }
+        /* ── Track ──────────────────────────────── */
+        .ci-flow-track-wrapper {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            min-height: 120px;
+            transition: height 0.45s cubic-bezier(0.16,1,0.3,1);
+        }
+        .ci-flow-track {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+        }
+        .ci-flow-step {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            flex: 0 0 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+        /* ── Step inner layout ──────────────────── */
+        .ci-flow-step-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.75rem;
+            padding: 2.5rem 3.5rem;
+            min-height: 120px;
+        }
+        .ci-flow-left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .ci-flow-counter {
+            font-size: 10.5px;
+            letter-spacing: 0.12em;
+            color: #999;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .ci-flow-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0f0f0f;
+            line-height: 1.35;
+            margin: 0;
+        }
+        .ci-flow-right {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+        }
+        /* ── Options (pills) ────────────────────── */
+        .ci-flow-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .ci-flow-opt {
+            padding: 10px 20px;
+            border: 1.5px solid rgba(0,0,0,0.15);
+            border-radius: 100px;
+            background: transparent;
+            color: #333;
+            font-size: 0.88rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            white-space: nowrap;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+        }
+        .ci-flow-opt:hover {
+            background: #0f0f0f;
+            border-color: #0f0f0f;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .ci-flow-opt.selected {
+            background: #0f0f0f;
+            border-color: #0f0f0f;
+            color: #fff;
+        }
+        /* ── Input steps ────────────────────────── */
+        .ci-flow-right--input {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+        }
+        .ci-flow-input-group {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 12px;
+            width: 100%;
+            max-width: 480px;
+            border-bottom: 1.5px solid rgba(0,0,0,0.15);
+            padding-bottom: 8px;
+            transition: border-color 0.2s;
+        }
+        .ci-flow-input-group:focus-within { border-color: #0f0f0f; }
+        .ci-flow-input-group.error { border-color: #ef4444; }
+        .ci-flow-input {
+            flex: 1;
+            min-width: 0;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            color: #0f0f0f;
+            background: transparent;
+            font-family: inherit;
+            padding: 4px 0;
+        }
+        .ci-flow-input::placeholder { color: #bbb; }
+        .ci-flow-submit-btn {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: #0f0f0f;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .ci-flow-submit-btn:hover { transform: scale(1.08); background: #333; }
+        .ci-flow-submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .ci-flow-hint { font-size: 11px; color: #aaa; letter-spacing: 0.02em; }
+        .ci-flow-hint--error { color: #ef4444; }
+        /* ── Análise IA ─────────────────────────── */
+        .ci-flow-step--analysis { min-height: unset !important; }
+        .ci-flow-step-inner--analysis {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            padding: 2rem 2.5rem !important;
+            min-height: unset !important;
+            gap: 0 !important;
+        }
+        .ci-flow-analysis-content { width: 100%; overflow: hidden; }
+        .ci-flow-loading { display: flex; align-items: center; gap: 12px; }
+        .ci-flow-loading-dots { display: flex; gap: 5px; }
+        .ci-flow-loading-dots span {
+            width: 7px; height: 7px;
+            background: #0f0f0f;
+            border-radius: 50%;
+            animation: ciDotBounce 1.2s infinite ease-in-out both;
+        }
+        .ci-flow-loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .ci-flow-loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes ciDotBounce {
+            0%, 80%, 100% { transform: scale(0.5); opacity: 0.4; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+        .ci-flow-loading-text { font-size: 0.9rem; color: #666; }
+        .ci-flow-analysis-results {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .ci-flow-analysis-item {
+            font-size: 0.88rem;
+            color: #222;
+            line-height: 1.55;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: all 0.4s ease;
+            width: 100%;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            white-space: normal;
+            box-sizing: border-box;
+            display: block;
+        }
+        .ci-flow-analysis-item.visible { opacity: 1; transform: translateY(0); }
+        .ci-flow-analysis-next {
+            margin-top: 14px;
+            padding: 10px 20px;
+            background: #0f0f0f;
+            color: white;
+            border: none;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: all 0.4s ease 0.6s, transform 0.15s ease;
+            align-self: flex-start;
+        }
+        .ci-flow-analysis-next.visible { opacity: 1; transform: translateY(0); }
+        .ci-flow-analysis-next:hover { background: #333; }
+        /* ── End step ───────────────────────────── */
+        .ci-flow-step--end { min-height: unset !important; }
+        .ci-flow-step-inner--end {
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            gap: 8px !important;
+            padding: 1.75rem 2.5rem !important;
+            min-height: unset !important;
+        }
+        .ci-flow-end-title { font-size: 1.25rem; font-weight: 700; color: #0f0f0f; margin: 0; }
+        .ci-flow-end-sub { font-size: 0.9rem; color: #666; margin: 0; max-width: 360px; }
+
+        .ci-flow-track-wrapper { display: block !important; overflow: hidden !important; }
+        .ci-flow-track { display: flex !important; flex-wrap: nowrap !important; }
+        .ci-flow-step { width: 100% !important; max-width: 100% !important; min-width: 100% !important; flex: 0 0 100% !important; flex-shrink: 0 !important; box-sizing: border-box !important; }
+        .ci-flow-step-inner { display: flex !important; }
+        .ci-flow-input-group {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            flex-wrap: nowrap !important;
+        }
+        .ci-flow-input-group > input { flex: 1 !important; min-width: 0 !important; }
+        .ci-flow-input-group > button {
+            flex-shrink: 0 !important;
+            position: static !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .ci-flow-options { display: flex !important; }
+        .ci-flow-analysis-results { display: flex !important; flex-direction: column !important; }
+        .ci-flow-loading { display: flex; }
+
+        /* ── MOBILE ─────────────────────────────── */
+        @media (max-width: 768px) {
+            [pop-up="cta"] {
+                align-items: center !important;
+                padding-top: 1rem !important;
+            }
+            .pop-up_cta_modal, #ciFlowModal {
+                width: 92vw !important;
+                max-width: 92vw !important;
+                overflow: hidden !important;
+                border-radius: 20px !important;
+                box-sizing: border-box !important;
+            }
+            .pop-up_cta_c,
+            .pop-up_cta_form-block_form,
+            .pop-up_cta_form-block {
+                width: 92vw !important;
+                max-width: 92vw !important;
+                box-sizing: border-box !important;
+            }
+            .ci-flow-track-wrapper { width: 100% !important; max-width: 100% !important; }
+            .ci-flow-track { width: 100% !important; }
+            .ci-flow-step { width: 100% !important; min-width: 100% !important; max-width: 100% !important; }
+            .ci-flow-step-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+                padding: 2rem 1.5rem 1.5rem;
+                min-height: unset;
+            }
+            .ci-flow-left { flex: unset; width: 100%; overflow: visible !important; }
+            .ci-flow-right, .ci-flow-right--input { width: 100%; }
+            .ci-flow-options { flex-direction: column; width: 100%; }
+            .ci-flow-opt { width: 100%; padding: 14px 20px; border-radius: 14px; font-size: 0.95rem; text-align: left; }
+            .ci-flow-question {
+                font-size: 1.05rem !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+                overflow: visible !important;
+                width: 100% !important;
+            }
+            .ci-flow-step { overflow: visible !important; }
+            .ci-flow-step-inner--analysis { padding: 2rem 1.5rem; }
+            .ci-flow-step-inner--end { padding: 1.75rem 1.5rem; text-align: center !important; align-items: center !important; }
+            .pop-up_cta_c.ci-flow-modal--end,
+            .pop-up_cta_c.ci-flow-modal--end .pop-up_cta_modal,
+            .pop-up_cta_c.ci-flow-modal--end #ciFlowModal {
+                width: auto !important;
+                max-width: 340px !important;
+                min-width: 280px !important;
+            }
+        }
+    </style>
+
+    <!-- =============================================
+         CI — POP-UP HANDLER JS
+         ============================================= -->
+    <script>
+        (function() {
+            function openModal(opener) {
+                var el = document.querySelector('[pop-up="cta"]');
+                if (el) {
+                    el.classList.add('is-open');
+                    if (opener && window.innerWidth > 768) {
+                        var rect = opener.getBoundingClientRect();
+                        var modal = document.getElementById('ciFlowModal');
+                        if (modal) {
+                            var left = rect.left + (rect.width / 2) - (680 / 2);
+                            if (left < 16) left = 16;
+                            if (left + 680 > window.innerWidth - 16) left = window.innerWidth - 680 - 16;
+                            var top = rect.bottom + 24; // Puts it nicely below CTA
+                            
+                            el.style.alignItems = 'flex-start';
+                            el.style.justifyContent = 'flex-start';
+                            el.style.paddingLeft = left + 'px';
+                            el.style.paddingTop = top + 'px';
+                        }
+                    } else {
+                        el.style.alignItems = '';
+                        el.style.justifyContent = '';
+                        el.style.paddingLeft = '';
+                        el.style.paddingTop = '';
+                    }
+                }
+                document.body.classList.add('ci-modal-open');
+                document.documentElement.classList.add('ci-modal-open');
+                if (window.lenis) window.lenis.stop();
+            }
+            function closeModal() {
+                var el = document.querySelector('[pop-up="cta"]');
+                if (el) el.classList.remove('is-open');
+                document.body.classList.remove('ci-modal-open');
+                document.documentElement.classList.remove('ci-modal-open');
+                if (window.lenis) window.lenis.start();
+            }
+            document.addEventListener('click', function(e) {
+                var opener = e.target.closest('[pop-up-open="cta"]');
+                if (opener) { e.preventDefault(); openModal(opener); return; }
+                var closer = e.target.closest('[pop-up-close="cta"]');
+                if (closer) { e.preventDefault(); closeModal(); return; }
+                var overlay = e.target.closest('[pop-up-over="cta"]');
+                if (overlay) { closeModal(); return; }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+    </script>
+
+    <!-- =============================================
+         CI FLOW — JS
+         ============================================= -->
+    <script>
+    (function () {
+        var TOTAL_STEPS = 6;
+        var currentStep = 0;
+        var leadData = { phase: '', bottleneck: '', site: '', timing: '', email: '', whatsapp: '', aiSummary: '' };
+        var isProcessing = false;
+        var hasStarted = false;
+
+        var track = document.getElementById('ciFlowTrack');
+        var progressFill = document.getElementById('ciProgressFill');
+        var wrapper = track ? track.parentElement : null;
+
+        function goToStep(idx) {
+            if (!track) return;
+            var allSteps = track.querySelectorAll('.ci-flow-step');
+            allSteps.forEach(function(s, i) {
+                s.style.visibility = (i === idx) ? 'visible' : 'hidden';
+            });
+            track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+            currentStep = idx;
+            updateProgress(idx);
+            var steps = track.querySelectorAll('.ci-flow-step');
+            if (wrapper && steps[idx]) {
+                var targetStep = steps[idx];
+                var innerEl = targetStep.querySelector('[class*="ci-flow-step-inner"]');
+                // Mede a altura do step ativo forçando reflow imediato
+                var savedTransition = wrapper.style.transition;
+                wrapper.style.transition = 'none';
+                wrapper.style.height = 'auto';
+                void wrapper.offsetHeight; // força reflow
+                var natural = innerEl ? innerEl.offsetHeight : targetStep.offsetHeight;
+                if (!natural || natural < 80) natural = 160; // fallback de segurança
+                wrapper.style.height = natural + 'px';
+                requestAnimationFrame(function() {
+                    wrapper.style.transition = savedTransition;
+                });
+            }
+            var modalEl = document.getElementById('ciFlowModal');
+            if (modalEl) {
+                var modalCtn = modalEl.closest('.pop-up_cta_c') || modalEl.parentElement;
+                if (idx === 7) {
+                    modalEl.classList.add('ci-flow-modal--end');
+                    if (modalCtn) modalCtn.classList.add('ci-flow-modal--end');
+                } else {
+                    modalEl.classList.remove('ci-flow-modal--end');
+                    if (modalCtn) modalCtn.classList.remove('ci-flow-modal--end');
+                }
+            }
+        }
+
+        function initFlow() {
+            if (!wrapper || !track) return;
+            var steps = track.querySelectorAll('.ci-flow-step');
+            steps.forEach(function(s, i) {
+                s.style.visibility = i === 0 ? 'visible' : 'hidden';
+            });
+            // Mede a altura do primeiro step com reflow forçado
+            setTimeout(function() {
+                if (steps[0]) {
+                    var inner0 = steps[0].querySelector('[class*="ci-flow-step-inner"]');
+                    wrapper.style.transition = 'none';
+                    wrapper.style.height = 'auto';
+                    void wrapper.offsetHeight;
+                    var h = inner0 ? inner0.offsetHeight : steps[0].offsetHeight;
+                    if (!h || h < 80) h = 160;
+                    wrapper.style.height = h + 'px';
+                    requestAnimationFrame(function() { wrapper.style.transition = ''; });
+                }
+            }, 100);
+        }
+
+        function handleCtaClick(e) {
+            setTimeout(initFlow, 100);
+            document.body.classList.add('ci-modal-open');
+            document.documentElement.classList.add('ci-modal-open');
+            if (window.lenis) window.lenis.stop();
+        }
+        function handleCtaClose() {
+            document.body.classList.remove('ci-modal-open');
+            document.documentElement.classList.remove('ci-modal-open');
+            if (window.lenis) window.lenis.start();
+        }
+        document.querySelectorAll('[pop-up-open="cta"]').forEach(function(el) {
+            el.addEventListener('click', handleCtaClick);
+        });
+        document.querySelectorAll('[pop-up-close="cta"]').forEach(function(el) {
+            el.addEventListener('click', handleCtaClose);
+        });
+
+        function updateProgress(stepIdx) {
+            var userSteps = [0,1,2,4,5,6];
+            var filled = userSteps.indexOf(stepIdx);
+            if (filled < 0) filled = userSteps.length;
+            var pct = Math.min(100, (filled / TOTAL_STEPS) * 100);
+            if (progressFill) progressFill.style.width = pct + '%';
+        }
+
+        // ── Step 0: E-mail ────────────────────────
+        function submitEmail() {
+            if (isProcessing) return;
+            var val = document.getElementById('ciInputEmail').value.trim();
+            var err = document.getElementById('ciEmailError');
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRe.test(val)) {
+                if (err) err.textContent = 'Please enter a valid email.';
+                flashError('ciInputEmail');
+                return;
+            }
+            if (err) err.textContent = '';
+            leadData.email = val;
+            goToStep(1);
+        }
+        document.getElementById('ciSubmitEmail').onclick = submitEmail;
+        document.getElementById('ciInputEmail').onkeypress = function(e) { if (e.key === 'Enter') submitEmail(); };
+
+        // ── Steps 1 e 2: Fase e Gargalo ──────────
+        document.querySelectorAll('.ci-flow-step[data-step="1"] .ci-flow-opt').forEach(function(btn) {
+            btn.onclick = function() {
+                if (isProcessing) return;
+                leadData.phase = this.dataset.value;
+                goToStep(2);
+            };
+        });
+        document.querySelectorAll('.ci-flow-step[data-step="2"] .ci-flow-opt').forEach(function(btn) {
+            btn.onclick = function() {
+                if (isProcessing) return;
+                leadData.bottleneck = this.dataset.value;
+                goToStep(3);
+            };
+        });
+
+        // ── Step 3: Site → análise ────────────────
+        function submitSite() {
+            if (isProcessing) return;
+            var val = document.getElementById('ciInputSite').value.trim();
+            if (!val) { flashError('ciInputSite'); return; }
+            leadData.site = val;
+            isProcessing = true;
+            goToStep(4);
+            runAnalysis(val);
+        }
+        document.getElementById('ciSubmitSite').onclick = submitSite;
+        document.getElementById('ciInputSite').onkeypress = function(e) { if (e.key === 'Enter') submitSite(); };
+
+        function runAnalysis(url) {
+            var loading = document.getElementById('ciAnalysisLoading');
+            var results = document.getElementById('ciAnalysisResults');
+            var neg = document.getElementById('ciAnalysisNegocio');
+            var gap = document.getElementById('ciAnalysisGap');
+            var acao = document.getElementById('ciAnalysisAcao');
+            var next = document.getElementById('ciAnalysisNext');
+
+            if (loading) loading.style.display = 'flex';
+            if (results) results.style.display = 'none';
+
+            function syncHeight() {
+                setTimeout(function() {
+                    if (wrapper && track) {
+                        var steps = track.querySelectorAll('.ci-flow-step');
+                        if (steps[4]) wrapper.style.height = steps[4].offsetHeight + 'px';
+                    }
+                }, 50);
+            }
+
+            fetch('/api/analyze?t=' + Date.now(), {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url, phase: leadData.phase, bottleneck: leadData.bottleneck })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (loading) loading.style.display = 'none';
+                if (!data.skipped && data.analysis) {
+                    leadData.aiSummary = data.analysis.negocio + ' | ' + data.analysis.gap + ' | ' + data.analysis.acao;
+                    if (neg) neg.innerHTML = '🏢 <strong>' + data.analysis.negocio + '</strong>';
+                    if (gap) gap.textContent = '⚠️ ' + data.analysis.gap;
+                    if (acao) acao.innerHTML = '🚀 <strong>' + data.analysis.acao + '</strong>';
+                    if (next) next.textContent = 'Makes sense — continue →';
+                } else {
+                    leadData.aiSummary = 'Profile-based analysis';
+                    if (data.skipped === 'SCRAPE_FAIL') {
+                        if (neg) neg.innerHTML = '🏢 <strong>Profile Diagnosis</strong>';
+                        if (gap) gap.textContent = "We couldn't read all the details of your site right now, but we identified your business profile as " + (leadData.phase || 'business') + '.';
+                        if (acao) acao.innerHTML = '🚀 <strong>Suggestion:</strong> Focus on resolving your ' + (leadData.bottleneck || 'growth') + ' bottleneck with a tailored solution.';
+                    } else {
+                        leadData.aiSummary = 'Strategic diagnosis prepared';
+                        if (neg) neg.innerHTML = '🏢 <strong>Strategic Diagnosis</strong>';
+                        if (gap) gap.textContent = 'I analyzed your current stage as ' + (leadData.phase || 'business') + ' and prepared recommendations for your ' + (leadData.bottleneck || 'growth') + ' bottleneck.';
+                        if (acao) acao.innerHTML = '🚀 <strong>Action Plan:</strong> Click below to continue to your personalized execution plan.';
+                    }
+                    if (next) next.textContent = 'Continue →';
+                }
+                if (results) results.style.display = 'flex';
+                setTimeout(function() { if (neg) neg.classList.add('visible'); }, 150);
+                setTimeout(function() { if (gap) gap.classList.add('visible'); }, 400);
+                setTimeout(function() { if (acao) acao.classList.add('visible'); }, 650);
+                setTimeout(function() { if (next) next.classList.add('visible'); }, 900);
+                syncHeight();
+            })
+            .catch(function(err) {
+                if (loading) loading.style.display = 'none';
+                leadData.aiSummary = 'Simplified analysis';
+                if (neg) neg.innerHTML = '🏢 <strong>Strategic Diagnosis</strong>';
+                if (gap) gap.textContent = 'We prepared recommendations focused on ' + (leadData.bottleneck || 'optimization') + ' based on the data you provided.';
+                if (acao) acao.innerHTML = '🚀 <strong>Action:</strong> Click below to save and continue with your plan.';
+                if (results) results.style.display = 'flex';
+                if (next) { next.textContent = 'Continue →'; next.classList.add('visible'); }
+                [neg, gap, acao].forEach(function(el) { if(el) el.classList.add('visible'); });
+                syncHeight();
+            });
+        }
+
+        var analysisNext = document.getElementById('ciAnalysisNext');
+        if (analysisNext) {
+            analysisNext.onclick = function() {
+                isProcessing = false;
+                goToStep(5);
+            };
+        }
+
+        // ── Step 5: Timing ────────────────────────
+        document.querySelectorAll('.ci-flow-step[data-step="5"] .ci-flow-opt').forEach(function(btn) {
+            btn.onclick = function() {
+                if (isProcessing) return;
+                leadData.timing = this.dataset.value;
+                goToStep(6);
+            };
+        });
+
+        // ── Step 6: WhatsApp → salva → fim ────────
+        function submitWhatsapp() {
+            if (isProcessing) return;
+            var val = document.getElementById('ciInputWhatsapp').value.trim();
+            var err = document.getElementById('ciWhatsappError');
+            if (val.replace(/\D/g,'').length < 8) {
+                if (err) err.textContent = 'Please include country code and number.';
+                flashError('ciInputWhatsapp');
+                return;
+            }
+            if (err) err.textContent = '';
+            leadData.whatsapp = val;
+            isProcessing = true;
+            goToStep(7);
+            saveLead();
+        }
+        document.getElementById('ciSubmitWhatsapp').onclick = submitWhatsapp;
+        document.getElementById('ciInputWhatsapp').onkeypress = function(e) { if (e.key === 'Enter') submitWhatsapp(); };
+
+        function saveLead() {
+            // 1. Salva no banco de dados (opcional, mantendo sua integração original)
+            fetch('/api/save-lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(leadData)
+            }).catch(function(e) {});
+
+            // 2. Prepara a mensagem para o seu WhatsApp
+            var parts = (leadData.aiSummary || '').split(' | ');
+            var msg = "*🚀 New ConnectIdeia Diagnosis*\n\n" +
+                      "*👤 Email:* " + leadData.email + "\n" +
+                      "*📊 Stage:* " + leadData.phase + "\n" +
+                      "*⚠️ Bottleneck:* " + leadData.bottleneck + "\n" +
+                      "*🔗 Site:* " + leadData.site + "\n" +
+                      "*⏳ Priority:* " + leadData.timing + "\n" +
+                      "*📱 Lead WhatsApp:* " + leadData.whatsapp + "\n\n" +
+                      "*🤖 AI Analysis:* \n_" + (parts[0] || parts[1] || 'Diagnosis prepared') + "_\n\n" +
+                      "I'd like to schedule a meeting to go over these points.";
+
+            var whatsappUrl = "https://wa.me/5519991697179?text=" + encodeURIComponent(msg);
+
+            // 3. Redireciona logo após o salvamento
+            setTimeout(function() {
+                window.open(whatsappUrl, '_blank');
+                goToStep(7); // Vai para o passo final de "Sucesso" no site
+                isProcessing = false;
+            }, 800);
+        }
+
+        function flashError(inputId) {
+            var input = document.getElementById(inputId);
+            if (!input) return;
+            var group = input.closest('.ci-flow-input-group');
+            if (group) {
+                group.classList.add('error');
+                setTimeout(function() { group.classList.remove('error'); }, 1500);
+            }
+        }
+
+        function resetFlow() {
+            leadData = { phase: '', bottleneck: '', site: '', timing: '', email: '', whatsapp: '', aiSummary: '' };
+            currentStep = 0;
+            isProcessing = false;
+            hasStarted = false;
+            if (wrapper) {
+                wrapper.style.transition = 'none';
+                wrapper.style.height = '';
+            }
+            goToStep(0);
+            requestAnimationFrame(function() { requestAnimationFrame(function() {
+                if (wrapper) wrapper.style.transition = '';
+            }); });
+            ['ciInputSite','ciInputEmail','ciInputWhatsapp'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.value = '';
+            });
+            var loading = document.getElementById('ciAnalysisLoading');
+            var results = document.getElementById('ciAnalysisResults');
+            if (loading) loading.style.display = 'flex';
+            if (results) results.style.display = 'none';
+            ['ciAnalysisNegocio','ciAnalysisGap','ciAnalysisAcao','ciAnalysisNext'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) { el.classList.remove('visible'); if (id !== 'ciAnalysisNext') el.textContent = ''; }
+            });
+        }
+
+        function handleCtaForm() {
+            var nameEl = document.getElementById('name');
+            var emailEl = document.getElementById('email');
+            
+            if (!nameEl.value || !emailEl.value) {
+                alert('Please fill in your name and email.');
+                return;
+            }
+
+            var name = nameEl.value;
+            var email = emailEl.value;
+            var msg = "*🚀 New Lead - ConnectIdeia*\n\n" +
+                      "*👤 Name:* " + name + "\n" +
+                      "*📧 Email:* " + email + "\n\n" +
+                      "I'd like to start my strategic analysis.";
+            var url = "https://wa.me/5519991697179?text=" + encodeURIComponent(msg);
+            
+            // Redirecionamento direto
+            window.location.href = url;
+        }
+
+        var ctaBtn = document.getElementById('ctaSubmitBtn');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', handleCtaForm);
+        }
+
+        var popupEl = document.querySelector('[pop-up="cta"]');
+        if (popupEl) {
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(m) {
+                    if (m.attributeName === 'class') {
+                        var isOpen = popupEl.classList.contains('is-open') ||
+                                     popupEl.classList.contains('is-active') ||
+                                     popupEl.classList.contains('active');
+                        if (!isOpen && currentStep > 0) {
+                            setTimeout(resetFlow, 400);
+                        }
+                    }
+                });
+            });
+            observer.observe(popupEl, { attributes: true });
+        }
+
+        document.querySelectorAll('[pop-up-close="cta"]').forEach(function(el) {
+            el.addEventListener('click', function() {
+                setTimeout(resetFlow, 500);
+            });
+        });
+
+    })();
+    </script>
+
+    <!-- Smooth scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js">
+    </script>
+    <script>
+      window.lenis = new Lenis({
+  duration: 2.5, // Controls scroll smoothness (higher = smoother, lower = faster)
+});
+function raf(time) {
+  window.lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+    </script>
+    <!-- Project Drawer -->
+    <div id="project-drawer" class="project-drawer">
+        <div class="drawer-close" id="drawer-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </div>
+        <div id="drawer-content">
+            <!-- Dinâmico -->
+        </div>
+        <a href="#" target="_blank" id="drawer-link" class="drawer-visit-btn">VISIT PROJECT →</a>
+    </div>
+    <script>
+      function closeProjectDrawer() {
+          const drawer = document.getElementById('project-drawer');
+          drawer.classList.remove('open');
+          if (window.lenis) window.lenis.start();
+      }
+      document.getElementById('drawer-close').addEventListener('click', closeProjectDrawer);
+    </script>
+    <div class="project-cursor" id="projectCursor">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5V19M5 12H19" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <script>
+      // Custom Cursor Logic
+      const cursor = document.getElementById('projectCursor');
+      const tickerImages = document.querySelectorAll('.hero-ticker-image');
+      
+      let mouseX = 0;
+      let mouseY = 0;
+      let cursorX = 0;
+      let cursorY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      
+      function animateCursor() {
+        const dx = mouseX - cursorX;
+        const dy = mouseY - cursorY;
+        
+        cursorX += dx * 0.15;
+        cursorY += dy * 0.15;
+        
+        cursor.style.left = `${cursorX}px`;
+        cursor.style.top = `${cursorY}px`;
+        
+        requestAnimationFrame(animateCursor);
+      }
+      
+      animateCursor();
+      
+      tickerImages.forEach(img => {
+        img.addEventListener('mouseenter', () => cursor.classList.add('active'));
+        img.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+      });
+    </script>
+  </body>
+</html>
